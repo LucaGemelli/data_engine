@@ -16,16 +16,17 @@ import static java.util.stream.StreamSupport.stream;
 public class PilotService {
 
     private final PilotRepository pilotRepository;
-    private final PilotMapper pilotMapper;
+  //  private final PilotMapper pilotMapper;
 
-    public PilotService(PilotRepository pilotRepository, PilotMapper pilotMapper) {
+    public PilotService(PilotRepository pilotRepository) {
         this.pilotRepository = pilotRepository;
-        this.pilotMapper = pilotMapper;
+//        this.pilotMapper = pilotMapper;
     }
 
     public List<PilotResponse> getPilotsWins() {
         //TODO - Pilotos que já venceram ao menos 1 corrida
-        return stream(pilotRepository.findAll().spliterator(), false).map(pilotMapper::toPilotResponse).collect(toList());
+//        return stream(pilotRepository.findAll().spliterator(), false).map(pilotMapper::toPilotResponse).collect(toList());
+        return null;
     }
 
 
@@ -36,11 +37,13 @@ public class PilotService {
 
     public List<PilotFullResponse> getPilotsAndConstructors(int number, int page) {
         // TODO - 10 pilotos que pilotaram pelo maior número de equipes, por ordem decrescente
-        return stream(pilotRepository.findAll().spliterator(), false).map(pilotMapper::toPilotFullResponse).collect(toList());
+//        return stream(pilotRepository.findAll().spliterator(), false).map(pilotMapper::toPilotFullResponse).collect(toList());
+        return null;
     }
 
     public List<PilotResponse> getPilots(String season, String round) {
         //TODO - Todos os pilotos que participaram de uma determinada corrida de uma determinada etapa. Exemplo: pilotos que participaram da segunda etapa da temporada
-        return stream(pilotRepository.findAll().spliterator(), false).map(pilotMapper::toPilotResponse).collect(toList());
+//        return stream(pilotRepository.findAll().spliterator(), false).map(pilotMapper::toPilotResponse).collect(toList());
+        return null;
     }
 }

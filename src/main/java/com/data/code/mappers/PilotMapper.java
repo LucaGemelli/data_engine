@@ -4,10 +4,15 @@ import com.data.code.model.entity.Pilot;
 import com.data.code.model.response.PilotFullResponse;
 import com.data.code.model.response.PilotResponse;
 import org.mapstruct.Mapper;
+import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring")
-public interface PilotMapper {
-    PilotResponse toPilotResponse(Pilot pilot);
+//@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.WARN)
+public class PilotMapper {
+    
+    public PilotMapper() {
+    }
 
-    PilotFullResponse toPilotFullResponse(Pilot pilot);
+    public PilotResponse toPilotResponse(Pilot pilot) {return null;};
+
+    public PilotFullResponse toPilotFullResponse(Pilot pilot) {return null;};
 }

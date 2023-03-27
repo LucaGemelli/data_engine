@@ -5,43 +5,46 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity
 @Data
-public class Results {
+public class Result {
     @Id
-    @Column(name = "resultId", nullable = false)
+    @Column(name = "result_id", nullable = false)
     private Long resultId;
-    @Column(name = "raceId")
+    @Column(name = "race_id")
     private Long raceId;
-    @Column(name = "driverId")
+    @Column(name = "driver_id")
     private Long driverId;
+    @Column(name = "constructor_id")
+    private Long constructorId;
     @Column(name = "number")
-    private Long number;
+    private String number;
     @Column(name = "grid")
     private Long grid;
     @Column(name = "position")
-    private Long position;
-    @Column(name = "positionText")
-    private Long positionText;
-    @Column(name = "positionOrder")
+    private String position;
+    @Column(name = "position_text")
+    private String positionText;
+    @Column(name = "position_order")
     private Long positionOrder;
     @Column(name = "points")
-    private Long points;
+    private BigDecimal points;
     @Column(name = "laps")
     private Long laps;
     @Column(name = "time")
     private String time;
     @Column(name = "milliseconds")
     private String milliseconds;
-    @Column(name = "fastestLap")
-    private Long fastestLap;
+    @Column(name = "fastest_lap")
+    private String fastestLap;
     @Column(name = "rank")
-    private Long rank;
-    @Column(name = "fastestLapTime")
+    private String rank;
+    @Column(name = "fastest_lap_time")
     private String fastestLapTime;
-    @Column(name = "fastestLapSpeed")
+    @Column(name = "fastest_lap_speed")
     private String fastestLapSpeed;
-    @Column(name = "statusId")
+    @Column(name = "status_id")
     private Long statusId;
 }
