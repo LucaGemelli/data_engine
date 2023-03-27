@@ -6,13 +6,10 @@ import com.data.code.model.response.PilotResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
-//@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.WARN)
-public class PilotMapper {
-    
-    public PilotMapper() {
-    }
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.WARN)
+public interface PilotMapper {
 
-    public PilotResponse toPilotResponse(Pilot pilot) {return null;};
+    PilotResponse toPilotResponse(Pilot pilot);
 
-    public PilotFullResponse toPilotFullResponse(Pilot pilot) {return null;};
+    PilotFullResponse toPilotFullResponse(Pilot pilot);
 }
