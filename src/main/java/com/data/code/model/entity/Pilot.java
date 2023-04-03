@@ -1,7 +1,6 @@
 package com.data.code.model.entity;
 
 import lombok.Data;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,22 +9,22 @@ import javax.persistence.Id;
 @Data
 public class Pilot {
     @Id
-    @Column(name = "driver_id")
+    @Column(name = "DRIVER_ID", nullable = false)
     private Long driverId;
-    @Column(name = "driver_ref")
+    @Column(name = "DRIVER_REF")
     private String driverRef;
-    @Column(name = "number")
+    @Column(name = "NUMBER")
     private String number;
-    @Column(name = "code")
+    @Column(name = "CODE")
     private String code;
-    @Column(name = "forename")
+    @Column(name = "FORENAME")
     private String forename;
-    @Column(name = "surname")
+    @Column(name = "SURNAME")
     private String surname;
-    @Column(name = "dob")
+    @Column(name = "DOB")
     private String dob;
-    @Column(name = "nationality")
+    @Column(name = "NATIONALITY")
     private String nationality;
-    @Column(name = "url")
+    @Column(name = "URL")
     private String url;
 }

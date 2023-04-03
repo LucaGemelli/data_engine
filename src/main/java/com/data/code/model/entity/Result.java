@@ -11,40 +11,40 @@ import java.math.BigDecimal;
 @Data
 public class Result {
     @Id
-    @Column(name = "result_id", nullable = false)
+    @Column(name = "RESULT_ID", nullable = false)
     private Long resultId;
-    @Column(name = "race_id")
+    @Column(name = "RACE_ID")
     private Long raceId;
-    @Column(name = "driver_id")
+    @Column(name = "DRIVER_ID")
     private Long driverId;
-    @Column(name = "constructor_id")
+    @Column(name = "CONSTRUCTOR_ID")
     private Long constructorId;
-    @Column(name = "number")
+    @Column(name = "NUMBER")
     private String number;
-    @Column(name = "grid")
+    @Column(name = "GRID")
     private Long grid;
-    @Column(name = "position")
+    @Column(name = "POSITION")
     private String position;
-    @Column(name = "position_text")
+    @Column(name = "POSITION_TEXT")
     private String positionText;
-    @Column(name = "position_order")
+    @Column(name = "POSITION_ORDER")
     private Long positionOrder;
-    @Column(name = "points")
+    @Column(name = "POINTS")
     private BigDecimal points;
-    @Column(name = "laps")
+    @Column(name = "LAPS")
     private Long laps;
-    @Column(name = "time")
+    @Column(name = "TIME")
     private String time;
-    @Column(name = "milliseconds")
+    @Column(name = "MILLISECONDS")
     private String milliseconds;
-    @Column(name = "fastest_lap")
+    @Column(name = "FASTEST_LAP")
     private String fastestLap;
-    @Column(name = "rank")
+    @Column(name = "RANK")
     private String rank;
-    @Column(name = "fastest_lap_time")
+    @Column(name = "FASTEST_LAP_TIME")
     private String fastestLapTime;
-    @Column(name = "fastest_lap_speed")
+    @Column(name = "FASTEST_LAP_SPEED")
     private String fastestLapSpeed;
-    @Column(name = "status_id")
+    @Column(name = "STATUS_ID")
     private Long statusId;
 }
