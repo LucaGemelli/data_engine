@@ -1,10 +1,6 @@
 # springboot-data-engine-app
-
-[![Build Status](https://travis-ci.org/codecentric/springboot-sample-app.svg?branch=master)](https://travis-ci.org/codecentric/springboot-sample-app)
-[![Coverage Status](https://coveralls.io/repos/github/codecentric/springboot-sample-app/badge.svg?branch=master)](https://coveralls.io/github/codecentric/springboot-sample-app?branch=master)
-[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-
 [Spring Boot](http://projects.spring.io/spring-boot/) Data Engine.
+
 
 ## Requirements
 
@@ -22,3 +18,7 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 ```shell
 mvn spring-boot:run
 ```
+
+access swagger in the url http://localhost:8085/swagger-ui.html to test.
+
+access admin h2 in the url http://localhost:8085/h2-console with the user and password configured in the properties to test.
