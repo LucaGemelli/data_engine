@@ -4,14 +4,20 @@ import com.data.code.model.entity.PilotStandings;
 import com.data.code.model.repository.PilotStandingsRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
-import static java.util.Optional.ofNullable;
+import java.util.Comparator;
 
 @Service
 public record PilotStandingsService(PilotStandingsRepository pilotStandingsRepository) {
 
-    public Optional<PilotStandings> findWin(Long driverId) {
-        return ofNullable(pilotStandingsRepository.findByDriverIdGreaterThanAndWinsEquals(driverId, 1L));
+    public Boolean verifyHasWins(Long driverId) {
+        return pilotStandingsRepository.findByDriverId(driverId).stream().anyMatch(standings -> standings.getWins() > 1);
+    }
+
+    public Long getMostNumberOfWins(Long driverId) {
+        return pilotStandingsRepository.findByDriverId(driverId).stream().max(Comparator.comparingLong(PilotStandings::getWins)).get().getWins();
+    }
+
+    public void getWinsGaps() {
+
     }
 }

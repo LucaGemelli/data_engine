@@ -2,19 +2,19 @@ package com.data.code.model.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 @Data
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Result {
     @Id
     @Column(name = "RESULT_ID", nullable = false)
     private Long resultId;
-    @Column(name = "RACE_ID")
-    private Long raceId;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "RACE_ID")
+    private Race race;
     @Column(name = "DRIVER_ID")
     private Long driverId;
     @Column(name = "CONSTRUCTOR_ID")

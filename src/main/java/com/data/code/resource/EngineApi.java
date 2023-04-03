@@ -3,6 +3,7 @@ package com.data.code.resource;
 import com.data.code.model.response.NationalityResponse;
 import com.data.code.model.response.PilotFullResponse;
 import com.data.code.model.response.PilotResponse;
+import com.data.code.model.response.PilotSimpleResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -25,7 +26,7 @@ public interface EngineApi {
     @GetMapping(
             value = "/drivers/winning/",
             produces = "application/json")
-    ResponseEntity<List<PilotResponse>> getPilotsWins();
+    ResponseEntity<List<PilotSimpleResponse>> getPilotsWins();
 
     @ApiOperation(
             value = "return pilot with most wins gap",

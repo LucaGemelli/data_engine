@@ -11,9 +11,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
+import static com.data.code.model.enumeration.TableName.*;
 import static java.sql.DriverManager.getConnection;
 import static java.util.Arrays.asList;
-import static com.data.code.model.enumeration.TableName.*;
 
 public class FileReaderConfig {
 
@@ -40,6 +40,7 @@ public class FileReaderConfig {
     private static List<File> getFiles() {
         return asList(
                 new File("src/main/resources/database-csv/drivers.csv"),
+                new File("src/main/resources/database-csv/races.csv"),
                 new File("src/main/resources/database-csv/results.csv"),
                 new File("src/main/resources/database-csv/driver_standings.csv"),
                 new File("src/main/resources/database-csv/circuits.csv")
@@ -56,6 +57,8 @@ public class FileReaderConfig {
                 return PILOT_STANDINGS.getName();
             case "circuits.csv":
                 return CIRCUIT.getName();
+            case "races.csv":
+                return RACES.getName();
             default:
                 throw new RuntimeException();
         }

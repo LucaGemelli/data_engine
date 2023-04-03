@@ -4,7 +4,8 @@ public enum TableName {
     PILOT("PILOT"),
     RESULT("RESULT"),
     PILOT_STANDINGS("PILOT_STANDINGS"),
-    CIRCUIT("CIRCUIT");
+    CIRCUIT("CIRCUIT"),
+    RACES("RACE");
 
     private String name;
 

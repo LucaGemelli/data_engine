@@ -3,6 +3,7 @@ package com.data.code.resource;
 import com.data.code.model.response.NationalityResponse;
 import com.data.code.model.response.PilotFullResponse;
 import com.data.code.model.response.PilotResponse;
+import com.data.code.model.response.PilotSimpleResponse;
 import com.data.code.service.NationalityService;
 import com.data.code.service.PilotService;
 import io.swagger.annotations.Api;
@@ -26,7 +27,7 @@ public class EngineResource implements EngineApi {
     }
 
     @Override
-    public ResponseEntity<List<PilotResponse>> getPilotsWins() {
+    public ResponseEntity<List<PilotSimpleResponse>> getPilotsWins() {
         return ok(pilotService.getPilotsWins());
     }
 

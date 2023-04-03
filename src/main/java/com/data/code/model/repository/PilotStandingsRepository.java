@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface PilotStandingsRepository extends JpaRepository<PilotStandings, Long> {
 
-    PilotStandings findByDriverIdGreaterThanAndWinsEquals(Long driverId, Long wins);
+    List<PilotStandings> findByDriverId(Long driverId);
 }

@@ -12,6 +12,4 @@ import java.util.List;
 public interface ResultRepository extends JpaRepository<Result, Long> {
 
     List<Result> findResultsByDriverId(Long driverId);
-
-    Result findFirstByDriverId(Long driverId);
 }
